@@ -1,0 +1,46 @@
+<apex:page standardController="Lead" renderAs="pdf">
+    
+    <table style="font-family:sans-serif; padding-bottom:30px;">
+        <tr>
+            <td><apex:image id="Logof1" value="{!$Resource.logo}" width="60" height="60"/></td>
+            <td style="font:24pt; padding-left:10px; padding-right:250px;">Banco Tostão</td> 
+        </tr>
+    </table>
+
+    <h1>Dados do Lead</h1>
+    <table style="display: flex; justify-content: space-around;"> 
+        <td style="width:50%; padding-right:5px;">
+            <b>Nome completo:</b> {! Lead.Name } <br/> <br/>
+            <b>Data de nascimento: </b> <apex:outputField value="{! Lead.DataNascimento__c }"/><br/> <br/>
+            <b>Idade:</b> {! floor(Lead.Idade__c)} <br/> <br/>
+            <b>CPF:</b> {! Lead.CPF__c } <br/> <br/>
+            <b>Telefone:</b> {! Lead.Phone } <br/> <br/>
+        </td>
+
+        <!-- <td style="width:15%;"></td> -->
+        
+        <td style="width:50%; padding-right:5px;">
+            <b>E-mail:</b> {! Lead.Email } <br/> <br/>
+            <b>Endereço:</b> {! Lead.Endereco__c } <br/> <br/>
+            <b>Capital de Investimento: </b><apex:outputField value="{! Lead.CapitalInvestimento__c }"/> <br/> <br/>
+            <b>Interesse em: </b> <apex:outputField value="{! Lead.Interesse__c }"/> <br/><br/>
+        </td>
+    </table>
+
+
+    <apex:pageBlock >        
+        <apex:pageBlockSection >
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
+        
+<!--
+        <apex:pageBlockSection >
+            <apex:detail />
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection >
+            <apex:outputField value="{! Lead.Name }"/> <br/> 
+			<apex:outputField value="{! Lead.Phone }"/>
+        </apex:pageBlockSection>
+-->

@@ -1,0 +1,16 @@
+.imagemPerfil{
+    display: flex;
+    margin: auto;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+}
+.btnPerfil{
+    margin-left: 30px;
+}
+.uploadPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

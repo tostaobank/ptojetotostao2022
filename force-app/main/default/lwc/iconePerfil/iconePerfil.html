@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  title="Perfil" >
+        <img src={img} alt="teste" class="imagemPerfil">
+        
+        
+        <lightning-button-icon icon-name="utility:settings" alternative-text="Settings" title="Settings" onclick={mostarUpload} class="btnPerfil"></lightning-button-icon>
+        <lightning-button-icon icon-name="utility:delete" alternative-text="Delete" class="slds-m-left_xx-small" title="Delete" onclick={removeImg}></lightning-button-icon> 
+        
+        <div id="upload" style="display: none;">
+            <div class="slds-m-around_medium">
+                <lightning-input type="file" label="Insira a imagem" value={uploadedImg} onchange={openfileUpload} class="uploadPerfil"></lightning-input>
+            </div>
+            <template if:true={fileData}>
+                <p>{fileData.filename}</p>
+            </template>
+            <lightning-button variant="brand" label="upload" title="Submit" onclick={addImg} class="slds-m-left_x-small btnPerfil"></lightning-button>
+        </div>
+
+    </lightning-card>
+</template>
