@@ -14,7 +14,6 @@ public class iconePerfilControllerTest {
         insert contentVersion;
         
         List<ContentDocument> documents = [SELECT Id, Title, LatestPublishedVersionId FROM ContentDocument];
-        //create ContentDocumentLink record
         ContentDocumentLink cdl = New ContentDocumentLink();
         cdl.LinkedEntityId = objConta.id;
         cdl.ContentDocumentId = documents[0].Id;
@@ -49,7 +48,6 @@ public class iconePerfilControllerTest {
         insert contentVersion;
 
         List<ContentDocument> documents = [SELECT Id, Title, LatestPublishedVersionId FROM ContentDocument];
-        //create ContentDocumentLink record
         ContentDocumentLink cdl = New ContentDocumentLink();
         cdl.LinkedEntityId = objConta.id;
         cdl.ContentDocumentId = documents[0].Id;
@@ -103,7 +101,7 @@ public class iconePerfilControllerTest {
         insert contentVersion;
         
         List<ContentDocument> documents = [SELECT Id, Title, LatestPublishedVersionId FROM ContentDocument];
-        //create ContentDocumentLink record
+    
         ContentDocumentLink cdl = New ContentDocumentLink();
         cdl.LinkedEntityId = objConta.id;
         cdl.ContentDocumentId = documents[0].Id;
@@ -115,7 +113,7 @@ public class iconePerfilControllerTest {
         String retorno = iconePerfilController.uploadImg('pao com batata',contentVersion.Id, objConta.Id);
         Test.stopTest();
 
-        //ContentDocumentLink cdlId = [SELECT Id FROM ContentDocumentLink WHERE Id !=: cdl.Id LIMIT 1];
+    
 
         System.assertNotEquals(retorno, cdl.Id);
     }
