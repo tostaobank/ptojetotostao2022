@@ -17,8 +17,7 @@
             <b>Telefone:</b> {! Lead.Phone } <br/> <br/>
         </td>
 
-        <!-- <td style="width:15%;"></td> -->
-        
+   
         <td style="width:50%; padding-right:5px;">
             <b>E-mail:</b> {! Lead.Email } <br/> <br/>
             <b>Endereço:</b> {! Lead.Endereco__c } <br/> <br/>
@@ -34,13 +33,3 @@
     </apex:pageBlock>
 </apex:page>
         
-<!--
-        <apex:pageBlockSection >
-            <apex:detail />
-        </apex:pageBlockSection>
-
-        <apex:pageBlockSection >
-            <apex:outputField value="{! Lead.Name }"/> <br/> 
-			<apex:outputField value="{! Lead.Phone }"/>
-        </apex:pageBlockSection>
--->
